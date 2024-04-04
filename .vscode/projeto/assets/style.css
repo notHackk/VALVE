@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./moon.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --sufarce-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./sun.svg);
+}
+/* para usar imagens como background do site, usamos o exemplo acima*/
+#container {
+  width: 360px;
+  margin: auto;
+  padding-top: 56px;
+}
+/* no exemplo acima, estamos criando uma caixa apartir da tag (DIV) aonde poderemos criar novas caixa dentro dessa caixa, usamo a Propriedade (MARGIN) para centralizar a caixa  criada, Temos 2 formas de alinhar uma caixa no site (margin-right: auto; 
+margin-left: auto;) assim! ou simplesmente usando a propriedade (margin-auto;)*/
+
+#profile {
+  text-align: center;
+}
+#profile img {
+  width: 112px;
+}
+
+/*para deixar centralizado essa nova caixa, sera necessario usar 3 propriedades, eu irei estuda-las mais profundamente.
+ que sao: display: block e inline. ou usaremos a propriedade text-align, porem para usar essa propriedade voce tera que deixar, a div profile que foi criada em inline, #profile{text-align:center;} se voce alterar para block, nao ira funcionar a propriedade.*/
+
+#profile p {
+  font-weight: 600;
+  line-height: 24px;
+  padding: 24px;
+  margin-top: 8px;
+  color: var(--text-color);
+}
+/*o exemplo acima serve para modicar a estrutura da fonte, como tamanho, negrito, color e muito mais. */
+#switch button {
+  border: 0;
+  border-radius: 50%;
+  background: var(--switch-bg-url) white no-repeat center;
+  background-size: 50%;
+  width: 36px;
+  height: 36px;
+
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+}
+
+#switch span {
+  width: 64px;
+  height: 24px;
+  background: var(--sufarce-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: block;
+  border-radius: 9999px;
+}
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+.light #switch button{
+  right: 0;
+  left: initial;
+}
+
+body * {
+  .merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--text-color);
+  }
+}
+
+ul {
+  list-style: none;
+  gap: 16px;
+  flex-direction: column;
+  display: flex;
+  padding: 24px 0px;
+}
+
+ul li a {
+  color: var(--text-color);
+  border: solid red 1px;
+  border-radius: 8px;
+  padding: 16px 24px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  backdrop-filter: blur(4px);
+  background-color: var(--sufarce-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+ul li a:hover {
+  background-color: var(--surface-color-hover);
+  border: 1px solid var(--text-color);
+}
+
+footer {
+  display: flex;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text-color);
+  justify-content: center;
+  padding: 16px 0px;
+}
+
+footer a {
+  padding: 0px 8px;
+  color: var(--text-color);
+}
+
+#icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-size: 32px;
+  border-radius: 50%;
+  transition: background 0.5s;
+  backdrop-filter: blur(4px);
+  color: var(--text-color);
+}
+
+#icon a:hover {
+  background: var(--highlight-color);
+
+  /*aqui na propriedade (HOVER) apenas criamos o botao ou efeito, e adicionamos os efeitos a aba (icon a) como no exemplo acima, aqui usamos so a propriedade (background). caso eu use os efeito aqui, como "backdrop-filter" ou "transition" nao ira funcionar, por isso usamos em outra aba, de preferencia na aba dos links, que foi criada.*/
+}
+/*caso queira alinhar um texto que esta dentro de uma div.
+sera necessario usar esse codigo:  (display: block;
+  text-align: center;) ou usar (display: flex; justify-content: center;) a propriedade (JUSTIFY-CONTENT:CENTER) È utilizada para centralizar o texto no meio, ja a propriedade (ALIGN-ITEMS: CENTER) serve para centralizar totalmente o texto dentro de uma caixa, colocando todos os 4 lados em auto, para que nao fique despropocional dentro da caixa*/
