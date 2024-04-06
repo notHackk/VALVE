@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  height: 100vh;
 }
 
 :root {
@@ -214,3 +215,20 @@ footer a {
 /*caso queira alinhar um texto que esta dentro de uma div.
 sera necessario usar esse codigo:  (display: block;
   text-align: center;) ou usar (display: flex; justify-content: center;) a propriedade (JUSTIFY-CONTENT:CENTER) È utilizada para centralizar o texto no meio, ja a propriedade (ALIGN-ITEMS: CENTER) serve para centralizar totalmente o texto dentro de uma caixa, colocando todos os 4 lados em auto, para que nao fique despropocional dentro da caixa*/
+
+  /* media queries*/
+  @media(min-width: 700px){
+    .root {
+      --bg-url: url(./assets/bg=desktop.jpg);
+    
+    }
+     
+      .light {--bg-url: url(./assets/bg-desktop-light.jpg);
+      }
+      
+    
+
+
+
+
+  }
