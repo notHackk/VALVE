@@ -17,9 +17,9 @@ function togglemode() {
   //
   // no exemplo acima eu selecionei onde a imagem esta localizada no documento css
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./Manuel gome.jpeg")
+    img.setAttribute("src", "./assets/Manuel gome.jpeg")
   } else {
-    img.setAttribute("src", "./tinywow_profile_photo_51512929.png")
+    img.setAttribute("src", "./assets/tinywow_profile_photo_51512929.png")
   }
   // sempre verificar se as chaves {} estao corretas
 }
