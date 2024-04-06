@@ -72,6 +72,10 @@ margin-left: auto;) assim! ou simplesmente usando a propriedade (margin-auto;)*/
   transform: translateY(-50%);
   top: 50%;
   left: 0;
+  animation: slide-row 0.2s;
+}
+#switch button:hover { 
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -228,10 +232,22 @@ sera necessario usar esse codigo:  (display: block;
 /* animation */
 @keyframes slide-in {
   from {
-    left: 0%;
+    left: 0;
   }
 
   to {
-    right: 50%;
+ left: 50%;
   }
+}
+
+@keyframes slide-row {
+from {
+  left: 50%;
+
+}
+
+to {
+
+  left: 0;
+}
 }
