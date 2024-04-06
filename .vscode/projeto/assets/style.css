@@ -32,9 +32,11 @@ body {
 }
 /* para usar imagens como background do site, usamos o exemplo acima*/
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: auto;
   padding-top: 56px;
+
 }
 /* no exemplo acima, estamos criando uma caixa apartir da tag (DIV) aonde poderemos criar novas caixa dentro dessa caixa, usamo a Propriedade (MARGIN) para centralizar a caixa  criada, Temos 2 formas de alinhar uma caixa no site (margin-right: auto; 
 margin-left: auto;) assim! ou simplesmente usando a propriedade (margin-auto;)*/
