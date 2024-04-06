@@ -37,7 +37,6 @@ body {
   max-width: 588px;
   margin: auto;
   padding-top: 56px;
-
 }
 /* no exemplo acima, estamos criando uma caixa apartir da tag (DIV) aonde poderemos criar novas caixa dentro dessa caixa, usamo a Propriedade (MARGIN) para centralizar a caixa  criada, Temos 2 formas de alinhar uma caixa no site (margin-right: auto; 
 margin-left: auto;) assim! ou simplesmente usando a propriedade (margin-auto;)*/
@@ -90,9 +89,8 @@ margin-left: auto;) assim! ou simplesmente usando a propriedade (margin-auto;)*/
   width: 64px;
   margin: 4px auto;
 }
-.light #switch button{
-  right: 0;
-  left: initial;
+.light #switch button {
+  animation: slide-in 0.4s forwards;
 }
 
 body * {
@@ -216,19 +214,24 @@ footer a {
 sera necessario usar esse codigo:  (display: block;
   text-align: center;) ou usar (display: flex; justify-content: center;) a propriedade (JUSTIFY-CONTENT:CENTER) È utilizada para centralizar o texto no meio, ja a propriedade (ALIGN-ITEMS: CENTER) serve para centralizar totalmente o texto dentro de uma caixa, colocando todos os 4 lados em auto, para que nao fique despropocional dentro da caixa*/
 
-  /* media queries*/
-  @media(min-width: 700px){
-    .root {
-      --bg-url: url(./assets/bg=desktop.jpg);
-    
-    }
-     
-      .light {--bg-url: url(./assets/bg-desktop-light.jpg);
-      }
-      
-    
-
-
-
-
+/* media queries*/
+@media (min-width: 700px) {
+  .root {
+    --bg-url: url(./assets/bg=desktop.jpg);
   }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0%;
+  }
+
+  to {
+    right: 50%;
+  }
+}
